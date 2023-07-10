@@ -1,0 +1,12 @@
+Sat Jun 24 2023 13:57:41 - [PH-UMAS] error: 🚫 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+],

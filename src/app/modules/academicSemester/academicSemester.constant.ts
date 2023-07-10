@@ -1,0 +1,52 @@
+import {
+  IAcademicSemesterCodes,
+  IAcademicSemesterMonths,
+  IAcademicSemesterTitles,
+} from "./academicSemester.interface";
+
+// Academic semester title
+export const academicSemesterTitles: IAcademicSemesterTitles[] = [
+  "Autumn",
+  "Summer",
+  "Fall",
+];
+
+// Academic semester code
+export const academicSemesterCodes: IAcademicSemesterCodes[] = [
+  "01",
+  "02",
+  "03",
+];
+
+// Academic semester start and end months array
+export const academicSemesterMonths: IAcademicSemesterMonths[] = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+// Semester title with there specific code.
+export const academicSemesterTitleCodeMapper: {
+  [key: string]: string;
+} = {
+  Autumn: "01",
+  Summer: "02",
+  Fall: "03",
+};
+
+export const academicSemesterSearchableFields = ["title", "code", "year"];
+export const academicSemesterFilterableFields = [
+  "searchTerm",
+  "title",
+  "code",
+  "year",
+];

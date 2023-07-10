@@ -1,0 +1,1 @@
+Wed Jun 28 2023 2:2:52 - [PH-UMAS] error: 🚫 globalErrorHandler ~~ Cast to ObjectId failed for value "64993edbcd9589877f4b96" (type string) at path "_id" for model "AcademicSemester",
