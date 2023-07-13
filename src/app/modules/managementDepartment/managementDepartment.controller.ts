@@ -16,7 +16,7 @@ const createDepartment = catchAsync(async (req: Request, res: Response) => {
   );
 
   sendResponse<IManagementDepartment>(res, {
-    statusCode: httpStatus.OK,
+    statusCode: httpStatus.CREATED,
     success: true,
     message: "Management department created successfully",
     data: result,

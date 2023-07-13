@@ -3,11 +3,15 @@ import cors from "cors";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import routes from "./app/routes";
 import httpStatus from "http-status";
-// import { generateFacultyId } from "./app/modules/user/user.utils";
+import cookieParser from "cookie-parser";
+
 const app: Application = express();
 
 // cors
 app.use(cors());
+
+// cookie parser
+app.use(cookieParser());
 
 // parser
 app.use(express.json());

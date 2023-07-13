@@ -88,6 +88,12 @@ const createStudent = async (
     user.password = config.default_student_pass as string;
   }
 
+  // Hash password
+  // user.password = await bcrypt.hash(
+  //   user.password,
+  //   Number(config.bcrypt_salt_rounds)
+  // );
+
   // set role
   user.role = "student";
 

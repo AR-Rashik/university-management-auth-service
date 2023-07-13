@@ -35,7 +35,7 @@ const createSemester: RequestHandler = catchAsync(
     );
 
     sendResponse<IAcademicSemester>(res, {
-      statusCode: httpStatus.OK,
+      statusCode: httpStatus.CREATED,
       success: true,
       message: "Academic semester created successfully!",
       data: result,

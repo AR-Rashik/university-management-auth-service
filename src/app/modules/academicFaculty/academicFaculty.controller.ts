@@ -15,7 +15,7 @@ const createFaculty = catchAsync(async (req: Request, res: Response) => {
     academicFacultyData
   );
   sendResponse<IAcademicFaculty>(res, {
-    statusCode: httpStatus.OK,
+    statusCode: httpStatus.CREATED,
     success: true,
     message: "Academic Faculty created successfully",
     data: result,
@@ -24,6 +24,9 @@ const createFaculty = catchAsync(async (req: Request, res: Response) => {
 
 // Get all faculty
 const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
+  // console.log(req.headers.authorization);
+  // console.log(req.user);
+
   const filters = pick(req.query, academicFacultyFilterableFields);
   const paginationOptions = pick(req.query, paginationFields);
 

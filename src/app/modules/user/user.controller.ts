@@ -27,11 +27,13 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
 // Create student as user
 const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
+    // console.log(req.cookies, "cookie");
+
     const { student, ...userData } = req.body;
     const result = await UserService.createStudent(student, userData);
 
     sendResponse<IUser>(res, {
-      statusCode: httpStatus.OK,
+      statusCode: httpStatus.CREATED,
       success: true,
       message: `User - (${userData?.role}) created successfully`,
       data: result,
@@ -54,7 +56,7 @@ const createFaculty: RequestHandler = catchAsync(
     const result = await UserService.createFaculty(faculty, userData);
 
     sendResponse<IUser>(res, {
-      statusCode: httpStatus.OK,
+      statusCode: httpStatus.CREATED,
       success: true,
       message: `User - (${userData?.role}) created successfully`,
       data: result,
@@ -69,7 +71,7 @@ const createAdmin: RequestHandler = catchAsync(
     const result = await UserService.createAdmin(admin, userData);
 
     sendResponse<IUser>(res, {
-      statusCode: httpStatus.OK,
+      statusCode: httpStatus.CREATED,
       success: true,
       message: `User - (${userData?.role}) created successfully`,
       data: result,

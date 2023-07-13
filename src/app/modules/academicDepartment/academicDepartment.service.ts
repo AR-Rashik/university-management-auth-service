@@ -100,7 +100,7 @@ const updateDepartment = async (
     });
     if (isExist) {
       throw new ApiError(
-        httpStatus.BAD_REQUEST,
+        httpStatus.CONFLICT,
         `${payload.title} is already exist as an academic department title.`
       );
     }
